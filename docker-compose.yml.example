@@ -1,0 +1,45 @@
+#------------------------------------------------------
+# Для MySQL
+#------------------------------------------------------
+
+version: '3.1'
+
+services:
+
+    db:
+        image: mysql:8
+        #        restart: always
+
+        environment:
+            MYSQL_DATABASE: test1
+#            MYSQL_USER: user
+#            MYSQL_PASSWORD: 1234
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - "4893:3306"
+        volumes:
+            - ./dbdata:/var/lib/mysql/
+
+#------------------------------------------------------
+# Для PostgreSQL
+#------------------------------------------------------
+
+#version: '3.1'
+#
+#services:
+#
+#    db:
+#        image: postgres:15.4
+##        restart: always
+#        environment:
+#            POSTGRES_DB: guestbook
+#            POSTGRES_PASSWORD: root
+#            POSTGRES_USER: root
+#        ports:
+#            - '5107:5432'
+#        volumes:
+#            - ./data:/var/lib/postgresql/data
+
+#------------------------------------------------------
+# Для ...
+#------------------------------------------------------
