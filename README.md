@@ -4,7 +4,7 @@
 После клонирования данного проекта в терминале перейти в проект и:
 1. `composer install` - устанавливаем зависимости
 2. `cp .env.example .env` - создаем `.env`
-3. `cp docker-compose.yml.example docker-compose.yml.example` - создаем `docker-compose.yml`
+3. `cp docker-compose.yml.example docker-compose.yml` - создаем `docker-compose.yml`
 4. `php artisan key:generate` - генерируем ключ проекта
 5. `sudo docker compose up -d` - запускаем mySQL в Docker
 6. `php artisan migrate --seed` - создаем в базе данных таблицы и заполняем из фейковыми данными
